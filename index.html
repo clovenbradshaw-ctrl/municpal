@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ongoing Investigation: The Human Cost And Mysterious Finances Of Freddie O'Connell's "Non-traditional Rapid Rehousing"</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #0a0a0a;
+            min-height: 100vh;
+            overflow-x: hidden;
+            /* Better mobile padding */
+            padding: 0 16px;
+        }
+        
+        .header-banner {
+            background: linear-gradient(90deg, #ff0040, #ff0080);
+            color: white;
+            padding: 12px 20px;
+            margin: 0 -16px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            /* Ensure text wraps properly on mobile */
+            word-wrap: break-word;
+            line-height: 1.4;
+        }
+        
+        .header-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        /* Hide bullet points on very small screens */
+        .bullet-point::before {
+            content: '•';
+            margin: 0 8px;
+        }
+        
+        @keyframes shimmer {
+            100% { left: 100%; }
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            /* Responsive padding */
+            padding: 24px;
+            background: white;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff0040, #ff0080, #ff0040);
+            background-size: 200% 100%;
+            animation: gradient 3s ease infinite;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .investigation-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .investigation-badge {
+            display: inline-block;
+            background: #0a0a0a;
+            color: #ff0040;
+            padding: 8px 16px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            position: relative;
+            border: 2px solid #ff0040;
+            animation: pulse 2s infinite;
+            white-space: nowrap;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 0, 64, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 0, 64, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 0, 64, 0); }
+        }
+        
+        h1 {
+            font-size: 2em;
+            line-height: 1.15;
+            color: #0a0a0a;
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .byline {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 0.5px;
+        }
+        
+        .key-findings {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: white;
+            /* Responsive padding */
+            padding: 32px 24px;
+            margin: 32px -8px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        .key-findings::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,0,64,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .key-findings h2 {
+            color: white;
+            margin-bottom: 24px;
+            font-size: 1.5em;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .key-findings ul {
+            list-style: none;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .key-findings li {
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 18px;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+        
+        .key-findings li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ff0040;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .key-findings strong {
+            color: #ff0080;
+            font-weight: 600;
+        }
+        
+        .graph-section {
+            margin: 32px -8px 40px -8px;
+        }
+        
+        .graph-section a {
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .graph-section a:hover {
+            transform: scale(1.02);
+        }
+        
+        .graph-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .graph-section a:hover img {
+            box-shadow: 0 12px 50px rgba(0,0,0,0.3);
+        }
+        
+        .graph-caption {
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            margin-top: 16px;
+            font-style: italic;
+            padding: 0 16px;
+        }
+        
+        .impact-statement {
+            background: #f8f8f8;
+            padding: 32px 24px;
+            margin: 32px -8px;
+            border-left: 4px solid #ff0040;
+            border-radius: 8px;
+        }
+        
+        .impact-statement h3 {
+            color: #0a0a0a;
+            font-size: 1.4em;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        
+        .impact-statement p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .access-options {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 40px 0;
+        }
+        
+        .access-card {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 32px 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .access-card.premium {
+            border-color: #ff0040;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .access-card.premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff0040, #ff0080);
+        }
+        
+        .access-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 16px;
+            color: #0a0a0a;
+        }
+        
+        .price-tag {
+            font-size: 2.2em;
+            font-weight: 900;
+            color: #ff0040;
+            margin: 16px 0;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .price-tag span {
+            font-size: 0.4em;
+            color: #666;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        .access-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 24px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
+            /* Ensure button text doesn't get cut off */
+            white-space: nowrap;
+            overflow: visible;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ff0040, #ff0080);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 0, 64, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 0, 64, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #0a0a0a;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #1a1a2e;
+        }
+        
+        .footer-note {
+            margin-top: 40px;
+            padding: 24px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+            text-align: center;
+        }
+        
+        .related-coverage {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .related-coverage h3 {
+            font-size: 1.4em;
+            color: #0a0a0a;
+            margin-bottom: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .related-coverage h3::before {
+            content: '📰';
+            font-size: 1.2em;
+        }
+        
+        .related-article {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .related-article:hover {
+            border-color: #ff0040;
+            box-shadow: 0 4px 12px rgba(255, 0, 64, 0.1);
+        }
+        
+        .related-article::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #ff0040, #ff0080);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .related-article:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .article-source {
+            display: inline-block;
+            background: #0a0a0a;
+            color: white;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border-radius: 3px;
+        }
+        
+        .related-article h4 {
+            margin: 0 0 12px 0;
+            font-size: 1.2em;
+            line-height: 1.3;
+        }
+        
+        .related-article h4 a {
+            color: #0a0a0a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .related-article h4 a:hover {
+            color: #ff0040;
+        }
+        
+        .article-excerpt {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0 0 16px 0;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid #f0f0f0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .article-date {
+            color: #999;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        
+        .article-link {
+            color: #ff0040;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .article-link:hover {
+            gap: 8px;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 32px 24px;
+            border-radius: 16px;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            animation: slideIn 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #666;
+            line-height: 1;
+            padding: 4px;
+        }
+        
+        .modal-header {
+            margin-bottom: 24px;
+        }
+        
+        .modal-header h2 {
+            font-size: 1.5em;
+            color: #0a0a0a;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff0040;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .radio-option input[type="radio"] {
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .radio-option label {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .error-message {
+            color: #ff0040;
+            font-size: 13px;
+            margin-top: 4px;
+            display: none;
+        }
+        
+        .success-message {
+            display: none;
+            text-align: center;
+            color: #4CAF50;
+            font-size: 16px;
+            padding: 20px;
+            background: #f0f8f0;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        /* Tablet and Desktop Styles */
+        @media (min-width: 768px) {
+            body {
+                padding: 0 30px;
+            }
+            
+            .header-banner {
+                margin: 0 -30px;
+                padding: 12px 30px;
+                font-size: 13px;
+                letter-spacing: 2px;
+            }
+            
+            .container {
+                margin: 30px auto;
+                padding: 48px 48px;
+            }
+            
+            .investigation-header {
+                margin-bottom: 60px;
+            }
+            
+            .investigation-badge {
+                font-size: 11px;
+                padding: 8px 20px;
+                margin-bottom: 30px;
+                letter-spacing: 2px;
+            }
+            
+            h1 {
+                font-size: 2.8em;
+                margin-bottom: 25px;
+                letter-spacing: -1px;
+            }
+            
+            .byline {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+            
+            .key-findings {
+                padding: 40px 48px;
+                margin: 40px 0;
+            }
+            
+            .key-findings h2 {
+                font-size: 1.8em;
+                margin-bottom: 30px;
+            }
+            
+            .key-findings li {
+                padding-left: 45px;
+                margin-bottom: 22px;
+                font-size: 16px;
+            }
+            
+            .key-findings li:before {
+                font-size: 20px;
+            }
+            
+            .graph-section {
+                margin: 40px 0 50px 0;
+            }
+            
+            .graph-section a:hover {
+                transform: scale(1.015);
+            }
+            
+            .graph-caption {
+                font-size: 14px;
+                margin-top: 20px;
+            }
+            
+            .impact-statement {
+                padding: 40px 48px;
+                margin: 40px 0;
+            }
+            
+            .impact-statement h3 {
+                font-size: 1.6em;
+                margin-bottom: 20px;
+            }
+            
+            .access-options {
+                flex-direction: row;
+                gap: 30px;
+                margin: 50px 0;
+            }
+            
+            .access-card {
+                flex: 1;
+                padding: 40px 32px;
+            }
+            
+            .access-card h3 {
+                font-size: 1.5em;
+                margin-bottom: 20px;
+            }
+            
+            .price-tag {
+                font-size: 2.5em;
+                margin: 20px 0;
+            }
+            
+            .access-card p {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+            
+            .btn {
+                padding: 16px 40px;
+                font-size: 16px;
+            }
+            
+            .footer-note {
+                margin-top: 50px;
+                padding: 32px;
+                font-size: 15px;
+            }
+            
+            .related-coverage {
+                margin-top: 50px;
+                padding-top: 50px;
+            }
+            
+            .related-coverage h3 {
+                font-size: 1.6em;
+                margin-bottom: 30px;
+            }
+            
+            .related-article {
+                padding: 32px;
+            }
+            
+            .related-article h4 {
+                font-size: 1.3em;
+                margin-bottom: 16px;
+            }
+            
+            .article-excerpt {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            
+            .article-meta {
+                padding-top: 20px;
+            }
+            
+            .article-date {
+                font-size: 14px;
+            }
+            
+            .article-link {
+                font-size: 15px;
+            }
+            
+            .modal-content {
+                padding: 40px 35px;
+            }
+            
+            .close-btn {
+                top: 20px;
+                right: 20px;
+                font-size: 32px;
+            }
+            
+            .modal-header h2 {
+                font-size: 1.8em;
+            }
+            
+            .form-group {
+                margin-bottom: 24px;
+            }
+            
+            .form-group label {
+                font-size: 15px;
+            }
+            
+            .form-group input[type="email"],
+            .form-group textarea {
+                font-size: 16px;
+                padding: 14px;
+            }
+            
+            .radio-option label {
+                font-size: 15px;
+            }
+        }
+        
+        /* Large Desktop Styles */
+        @media (min-width: 1024px) {
+            .container {
+                padding: 60px 60px;
+            }
+            
+            h1 {
+                font-size: 3.2em;
+            }
+            
+            .key-findings {
+                padding: 50px 60px;
+                margin: 50px 0;
+            }
+            
+            .impact-statement {
+                padding: 50px 60px;
+                margin: 50px 0;
+            }
+            
+            .graph-section {
+                margin: 50px 0 60px 0;
+            }
+            
+            .graph-section a:hover {
+                transform: scale(1.01);
+            }
+            
+            .related-coverage {
+                margin-top: 60px;
+                padding-top: 60px;
+            }
+            
+            .related-article {
+                padding: 40px;
+            }
+        }
+        
+        /* Very small screens */
+        @media (max-width: 374px) {
+            .header-banner {
+                font-size: 10px;
+                letter-spacing: 1px;
+                padding: 10px 15px;
+            }
+            
+            .bullet-point {
+                display: none;
+            }
+            
+            h1 {
+                font-size: 1.6em;
+            }
+            
+            .price-tag {
+                font-size: 2em;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+            
+            .access-card {
+                padding: 24px 16px;
+            }
+            
+            .related-coverage h3 {
+                font-size: 1.2em;
+            }
+            
+            .related-article {
+                padding: 16px;
+            }
+            
+            .related-article h4 {
+                font-size: 1.1em;
+            }
+            
+            .article-excerpt {
+                font-size: 14px;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        Active Investigation <span class="bullet-point"></span> Real-Time Updates <span class="bullet-point"></span> Follow Until Conclusion
+    </div>
+    
+    <div class="container">
+        <div class="investigation-header">
+            <span class="investigation-badge">🔴 Active Investigation</span>
+            <h1>The Human Cost And Mysterious Finances Of Freddie O'Connell's "Non-traditional Rapid Rehousing"</h1>
+            <div class="byline">An investigative series by {Rich Text}</div>
+        </div>
+        
+        <div class="key-findings">
+            <h2>What We've Uncovered</h2>
+            <ul>
+                <li><strong>$100,000-$150,000</strong> in diverted COVID relief funds used for a shadow housing program outside federal and local oversight</li>
+                <li><strong>8+ families</strong> promised housing vouchers and a year of rent, then abandoned when funding ran out</li>
+                <li><strong>Text messages</strong> showing Director April Calvin hand-picking families outside the Coordinated Entry system</li>
+                <li><strong>Direct calls</strong> between the Mayor's office and affected tenants, raising questions about what O'Connell knew</li>
+                <li><strong>Missing invoices</strong> and documentation suggesting systematic attempts to hide the program's existence</li>
+            </ul>
+        </div>
+        
+        <div class="graph-section">
+            <a href="https://www.patreon.com/posts/142198328" target="_blank" style="display: block;">
+                <img src="https://storage.googleapis.com/intelechia-content/The%20Human%20Cost%20A%20and%20Mysterious%20Finances%20Of%20Mayor%20O%E2%80%99Connell%E2%80%99s%20%E2%80%9CNon-traditional%20Rapid%20Rehousing.png" alt="Investigation Data Visualization">
+            </a>
+            <div class="graph-caption">Documentary evidence: Text messages, financial records, and testimony revealing the shadow housing program</div>
+        </div>
+        
+        <div class="impact-statement">
+            <h3>Why This Investigation Matters Now</h3>
+            <p>As federal assaults on social services intensify and democratic norms collapse—with immigrants being disappeared and vulnerable communities under unprecedented attack—we desperately need local governments to be transparent, accountable sanctuaries that protect the least powerful among us. Instead, Mayor O'Connell's administration is operating shadow programs outside federal and local oversight, making verbal promises to desperate families, then abandoning them when the money runs out. Eight families have already faced eviction threats, sexual assault, ceiling collapses, and mail tampering. This isn't just mismanagement—it's a betrayal of public trust at the exact moment when transparent, functioning systems matter most for our collective survival. When the federal safety net is being shredded, local governments must not create their own dark, unaccountable systems.</p>
+        </div>
+        
+        <div class="access-options">
+            <div class="access-card premium">
+                <h3>Full Investigation Access</h3>
+                <div class="price-tag">$5 <span>one-time</span></div>
+                <p>Support accountability journalism when we need it most. Follow along in real-time as new evidence emerges. Get complete access to all findings, documents, and updates until this investigation concludes and justice is demanded.</p>
+                <a href="https://www.patreon.com/posts/142198328" class="btn btn-primary" target="_blank">Subscribe for $5</a>
+            </div>
+            
+            <div class="access-card">
+                <h3>MunciPal Access Card</h3>
+                <p style="font-weight: 600; color: #ff0040; margin-bottom: 15px;">FREE ACCESS</p>
+                <p>If you're directly impacted by this issue, facing housing instability, or unable to afford a subscription, get free access. In times like these, those most affected by government failures deserve to know what's being done in their name.</p>
+                <button class="btn btn-secondary" onclick="showModal()">Get Free Access</button>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            This investigation is ongoing. New documents, testimony, and evidence are being added as they are verified. In a time when accountability is under assault at every level, local journalism remains our last line of defense. Your support makes this work possible.
+        </div>
+        
+        <!-- Related Coverage Section -->
+        <div class="related-coverage">
+            <h3>Related Coverage</h3>
+            <div class="related-article">
+                <div class="article-source">Nashville Scene</div>
+                <h4>
+                    <a href="#" target="_blank">
+                        [Article Title Placeholder - Nashville Scene Coverage]
+                    </a>
+                </h4>
+                <p class="article-excerpt">
+                    [Article excerpt/description placeholder - This will be replaced with the actual Nashville Scene article summary when available]
+                </p>
+                <div class="article-meta">
+                    <span class="article-date">[Publication Date]</span>
+                    <a href="#" class="article-link" target="_blank">Read Full Article →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for MunciPal Access -->
+    <div id="accessModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <h2>Get Free Access</h2>
+            </div>
+            <form id="accessForm">
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    <span class="error-message" id="emailError">Please enter a valid email address</span>
+                </div>
+                
+                <div class="form-group">
+                    <label>Why are you requesting free access? *</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="impacted" name="reason" value="I'm directly impacted by this and need to stay in the know" required>
+                            <label for="impacted">I'm directly impacted by this and need to stay in the know</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="financial" name="reason" value="It's not a great time for me to be spending money but I need to know this" required>
+                            <label for="financial">It's not a great time for me to be spending money but I need to know this</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="other" name="reason" value="Other" required>
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">Additional Comments (Optional)</label>
+                    <textarea id="comments" name="comments" placeholder="Tell us more about your situation or interest in this investigation..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+            </form>
+            
+            <div class="success-message" id="successMessage">
+                ✓ Thank you! Check your email for access instructions.
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showModal() {
+            document.getElementById('accessModal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            document.getElementById('accessModal').classList.remove('show');
+            document.body.style.overflow = 'auto';
+            document.getElementById('accessForm').reset();
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('accessForm').style.display = 'block';
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('accessModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+        
+        // Form submission
+        document.getElementById('accessForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Validate email
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                return;
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+            
+            // Get form data
+            const formData = {
+                email: email,
+                reason: document.querySelector('input[name="reason"]:checked').value,
+                comments: document.getElementById('comments').value,
+                timestamp: new Date().toISOString(),
+                source: 'OHS Investigation Access Request'
+            };
+            
+            // Send to webhooks
+            const webhooks = [
+                'https://n8n.intelechia.com/webhook-test/858be5e2-cfc0-44a8-9c41-43865d4a04f3',
+                'https://n8n.intelechia.com/webhook/858be5e2-cfc0-44a8-9c41-43865d4a04f3'
+            ];
+            
+            // Send to webhooks with improved error handling
+            let successCount = 0;
+            
+            for (const url of webhooks) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        mode: 'no-cors', // Bypasses CORS restrictions
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    successCount++;
+                } catch (error) {
+                    console.error(`Error with webhook:`, error);
+                    // Try without no-cors as fallback
+                    try {
+                        await fetch(url, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(formData)
+                        });
+                        successCount++;
+                    } catch (fallbackError) {
+                        console.error('Fallback also failed:', fallbackError);
+                    }
+                }
+            }
+            
+            // Show success to user
+            document.getElementById('accessForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Save to localStorage as backup if webhooks failed
+            if (successCount === 0) {
+                const submissions = JSON.parse(localStorage.getItem('failedSubmissions') || '[]');
+                submissions.push(formData);
+                localStorage.setItem('failedSubmissions', JSON.stringify(submissions));
+            }
+            
+            // Close modal after 3 seconds
+            setTimeout(() => {
+                closeModal();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
