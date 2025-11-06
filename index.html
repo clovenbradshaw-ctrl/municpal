@@ -67,11 +67,76 @@
             margin: 0;
             display: block;
         }
-        
+
         .hero-banner img {
             width: 100%;
             height: auto;
             display: block;
+        }
+
+        .quick-access-cta {
+            background: var(--dark-navy);
+            padding: 30px 20px 10px;
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .quick-access-cta .container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .quick-access-cta h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--off-white);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .cta-options {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cta-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 20px 28px;
+            border: 2px solid var(--slate);
+            background: var(--light-gray);
+            color: var(--off-white);
+            text-decoration: none;
+            min-width: 220px;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-card.primary {
+            border-color: var(--red);
+        }
+
+        .cta-card.secondary {
+            background: rgba(42, 45, 62, 0.85);
+        }
+
+        .cta-card strong {
+            font-size: 22px;
+            color: var(--white);
+        }
+
+        .cta-card span {
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .cta-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--muted-red);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         
         header {
@@ -236,16 +301,28 @@
         }
         
         .payment-option {
+            display: flex;
+            flex-direction: column;
             padding: 40px 30px;
             background: var(--light-gray);
             border: 2px solid var(--slate);
             position: relative;
+            text-decoration: none;
+            color: var(--off-white);
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
         }
-        
+
         .payment-option-primary {
             border-color: var(--red);
         }
-        
+
+        .payment-option:hover {
+            border-color: var(--muted-red);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+        }
+
         .payment-option h3 {
             font-size: 28px;
             margin-bottom: 12px;
@@ -293,25 +370,26 @@
             cursor: pointer;
             transition: all 0.2s;
             margin-top: 20px;
+            pointer-events: none;
         }
         
         .btn-primary {
             background: var(--red);
             color: var(--white);
         }
-        
-        .btn-primary:hover {
-            background: var(--muted-red);
-            transform: translateY(-2px);
-        }
-        
+
         .btn-secondary {
             background: transparent;
             color: var(--white);
             border-color: var(--white);
         }
-        
-        .btn-secondary:hover {
+
+        .payment-option:hover .btn-primary {
+            background: var(--muted-red);
+            transform: translateY(-2px);
+        }
+
+        .payment-option:hover .btn-secondary {
             background: var(--white);
             color: var(--darker-navy);
         }
@@ -476,6 +554,16 @@
         }
         
         @media (max-width: 768px) {
+            .cta-options {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-card {
+                width: 100%;
+                align-items: flex-start;
+            }
+
             .payment-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -516,7 +604,23 @@
     <div class="hero-banner">
         <img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb375761e-d6f5-4dad-a7ca-5e6ab3e7f639_1920x1080.png" alt="NULLRESULTS Investigation Banner">
     </div>
-    
+
+    <section class="quick-access-cta">
+        <div class="container">
+            <h2>Choose Your Access</h2>
+            <div class="cta-options">
+                <a class="cta-card primary" href="https://www.patreon.com/collection/1812077">
+                    <strong>Full Access — $5/mo</strong>
+                    <span>Unlock complete document access and support independent investigations.</span>
+                </a>
+                <a class="cta-card secondary" href="https://www.patreon.com/collection/1812077">
+                    <strong>MunciPal Access Pass</strong>
+                    <span>Get the same coverage through community-supported free access.</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <header>
         <div class="container">
             <p class="tagline">An investigation into Nashville's unregulated approach to homelessness that has no definition and isn't working</p>
@@ -665,7 +769,7 @@
             <p class="subtitle">Access all documents, financial records, and updates as this investigation unfolds in real time.</p>
             
             <div class="payment-grid">
-                <div class="payment-option payment-option-primary">
+                <a class="payment-option payment-option-primary" href="https://www.patreon.com/collection/1812077">
                     <h3>Full Access</h3>
                     <div class="price">$5</div>
                     <ul>
@@ -674,10 +778,10 @@
                         <li>Real-time investigation updates</li>
                         <li>Complete evidence archive</li>
                     </ul>
-                    <a href="https://www.patreon.com/collection/1812077" class="btn btn-primary">Get Access Now</a>
-                </div>
-                
-                <div class="payment-option">
+                    <span class="btn btn-primary">Get Access Now</span>
+                </a>
+
+                <a class="payment-option" href="https://www.patreon.com/collection/1812077">
                     <h3>MunciPal Access Pass</h3>
                     <div class="price">FREE</div>
                     <ul>
@@ -686,8 +790,8 @@
                         <li>No payment required</li>
                         <li>Support accountability</li>
                     </ul>
-                    <a href="https://www.patreon.com/collection/1812077" class="btn btn-secondary">Get Free Access</a>
-                </div>
+                    <span class="btn btn-secondary">Get Free Access</span>
+                </a>
             </div>
         </div>
     </section>
